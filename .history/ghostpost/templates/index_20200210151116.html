@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Boast or Roast</title>
+</head>
+<body>
+    {% block content %}
+        {% for i in data %}
+        <div>
+        <ul>
+        {{ i.message}}<br/>{{i.time}}<br/> <span><button type="POST"><a href="/like/{{i.id}}">Like</a>
+        </button>{{i.like}}</span>
+        <span><button type="POST"><a href="/dislike/{{i.id}}">Dislike</a>
+        </button>{{i.dislike}}</span></ul>
+         <hr/>
+         </div>    
+             
+        {% endfor %}
+    
+    <a href="addpost/">Add a Post</a>
+    {% endblock %}
+    
+</body>
+</html>
+        

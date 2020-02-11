@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+<h3>Register</h3>
+
+{% block content %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form|crispy }}
+    <input type="submit" name="Create User">
+    </form>
+    
+{% endblock %}

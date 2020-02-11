@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{$ data.title.id $}
+    {% for d in data %}
+<ul>
+    <div>
+        
+<strong><li>{{ d.title}}</li></strong></br></br>
+        <li>{{ d.submitDate }}</li></br></br>
+        <li>{{ d.message }}</li></br></br>
+            {{ d.upvote }}
+            {{ d.downvote }}
+    </div>
+        
+</ul>
+    
+    {% endfor %}
+
+{% endblock %}
+
+

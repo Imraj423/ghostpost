@@ -1,0 +1,21 @@
+{% block content %}
+
+<h2>{{data.title}}</h2>
+    {% for d in data %}
+<ul>
+    <div>
+        
+        <strong><li>{{ d.title.id }}</li></strong></br></br>
+        <li>{{ d.submitDate }}</li></br></br>
+        <li>{{ d.message }}</li></br></br>
+        {{ d.upvote }}
+        {{ d.downvote }}
+    </div>
+        
+</ul>
+    
+    {% endfor %}
+
+{% endblock %}
+
+

@@ -1,0 +1,10 @@
+<h3> Roast or Boast</h3><br/>
+<h4> Throw Shade or Gas Up</h4>
+            {% for i in data %}
+            
+            <a href="detail/{{i.id}}" id="link1"> {{ i.title}}</a>
+                 {{i.message}}
+                 
+            {% endfor %}
+        </ul>
+        

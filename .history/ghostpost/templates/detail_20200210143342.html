@@ -1,0 +1,22 @@
+
+{% block content %}
+
+
+    {% for d in data %}
+<ul>
+    <div>
+        
+
+        
+        <li>{{ d.message }}</li></br></br>
+            {{ d.like }}
+            {{ d.dislike }}
+    </div>
+        
+</ul>
+    
+    {% endfor %}
+
+{% endblock %}
+
+

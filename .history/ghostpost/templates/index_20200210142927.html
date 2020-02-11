@@ -1,0 +1,17 @@
+
+        {% block content %}
+            {% for i in data %}
+            <div>
+            <ul>
+            {{ i.message}}<br/> <span><button type="POST"><a href="/like/{{i.id}}">Like</a>
+            </button>{{i.like}}</span>
+            <span><button type="POST"><a href="/dislike/{{i.id}}">Dislike</a>
+            </button>{{i.dislike}}</span></ul>
+             <hr/>
+             </div>    
+                 
+            {% endfor %}
+
+        <a href="addpost/">Add a Post</a>
+        {% endblock %}
+        

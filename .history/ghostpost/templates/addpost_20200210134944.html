@@ -1,0 +1,12 @@
+
+
+<h3>Leave a Comment</h3>
+
+{% block content %}
+    <form method="POST" action="request.path">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" name="Create Post">
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,11 @@
+
+        {% block content %}
+            {% for i in data %}
+            <ul>
+            {{ i.message}}<br/> Upvotes:{{ i.upvote }}</ul>
+                 
+                 
+            {% endfor %}
+        </ul>
+        {% endblock %}
+        

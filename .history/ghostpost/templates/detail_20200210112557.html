@@ -1,0 +1,20 @@
+{% block content %}
+
+<h2>{{data.title}}</h2>
+    {% if data %}
+<ul>
+    <div>
+        
+        <strong>{{ data.description }}</strong></br></br>
+        {{ data.submitDate }}</br></br>
+        <li>{{ data.message }}</li></br></br>
+        {{ data.upvote }}
+        {{ data.downvote }}
+    </div>
+        
+</ul>
+    {% else %}
+        <h3>oops</h3>
+    {% endif %}
+
+{% endblock %}

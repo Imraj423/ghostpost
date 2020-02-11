@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+        {% block content %}
+            {% for i in data %}
+            <ul>
+            <a href="detail/" > {{ i.title}}</a></ul>
+                 
+                 
+            {% endfor %}
+        </ul>
+        {% endblock %}
+        
