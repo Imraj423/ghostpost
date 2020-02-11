@@ -11,26 +11,18 @@
     <title class="title" style="padding: 5px;">Boast or Roast</title>
 </head>
 
-<body class="one" style="margin-left: 500px; margin-right: 500px; background-color: lightsalmon;">
+<body class="one" style="margin-left: 600px; margin-right: 600px; background-color: lightsalmon;">
     <h3>Boast or Roast</h3>
-    <!-- {% block content %}  -->
-    <nav>
-    <span><a href="/sort/">Likes </a></span><span> | </span>
-    <span><a href="/sortt/">Time added </a></span><span> | </span>
-    <span><a href="/boast/">Boast </a></span><span> | </span></nav>
-    <span><a href="/roast/">Roast </a></span>
-    <div class="overflow-auto"  style="height: 600px; overflow-y: scroll; border: 1px white solid; ">
-    {% for i in data %}
+    {% block content %} {% for i in data %}
     <div>
         <ul>
-            
-            {{ i.message}}
-            <br />
-            {% if i.is_Boast %}
-                <strong>Boast</strong>
-            {% else %}
-                <strong>Roast</strong>
-            {% endif %}
+            {{ i.message}}<br />
+            {% for d in data%}
+                {% if is_Boast %}
+                    {{d.is_Boast}}
+                {}
+                { % endif % }
+            {% endfor %}
             <br />
             {{i.time}}<br />
             <span>{{i.like}}
@@ -39,17 +31,15 @@
                 </button></span>
             <span><button type="POST">
                     <a href="/dislike/{{i.id}}">Dislike</a>
-                </button>
-    <input type="submit" value="Delete"/>
-            </span>
+                </button></span>
         </ul>
         <hr />
     </div>
 
     {% endfor %}
-</div>
-    <button><a href="addpost/">Add a Post</a></button>
-    <!-- {% endblock %} -->
+
+    <a href="addpost/">Add a Post</a>
+    {% endblock %}
 </body>
 
 </html>

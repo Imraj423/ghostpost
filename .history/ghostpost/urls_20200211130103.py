@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from ghostpost.models import ghostPost
+# from ghostpost.models import ghostPost
 
-admin.site.register(ghostPost)
+# admin.site.register(ghostPost)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -17,11 +17,11 @@
     <nav>
     <span><a href="/sort/">Likes </a></span><span> | </span>
     <span><a href="/sortt/">Time added </a></span><span> | </span>
-    <span><a href="/boast/">Boast </a></span><span> | </span></nav>
-    <span><a href="/roast/">Roast </a></span>
-    <div class="overflow-auto"  style="height: 600px; overflow-y: scroll; border: 1px white solid; ">
+    <span><a href="/sortb/">Boast </a></span><span> | </span></nav>
+    <span><a href="/sortr/">Roast </a></span>
+    <div class="overflow-auto"  style="height: 400px; overflow-y: hidden">
     {% for i in data %}
-    <div>
+    <div >
         <ul>
             
             {{ i.message}}
@@ -48,7 +48,7 @@
 
     {% endfor %}
 </div>
-    <button><a href="addpost/">Add a Post</a></button>
+    <a href="addpost/">Add a Post</a>
     <!-- {% endblock %} -->
 </body>
 

@@ -1,4 +1,4 @@
-
+from .filters import UserFilter
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from ghostpost.models import ghostPost
@@ -38,48 +38,14 @@ def like(request, id):
     post = ghostPost.objects.get(id=id)
     post.like += 1
     post.save()
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponseRedirect(reverse('index'))
 
 
 def dislike(request, id):
     post = ghostPost.objects.get(id=id)
     post.like -= 1
     post.save()
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponseRedirect(reverse('index'))
 
 
-def sorted(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by(
-        "-like")
-    return render(request, html, {"data": data})
 
-
-def sortedt(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by("-time")
-    return render(request, html, {"data": data})
-
-
-def sortedb(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by("-is_Boast")
-    return render(request, html, {"data": data})
-
-
-def sortedr(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by("-is_Boast").reverse()
-    return render(request, html, {"data": data})
-
-
-def boast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=True).order_by('-time')
-    return render(request, html, {'data': data})
-
-
-def roast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=False).order_by('-time')
-    return render(request, html, {'data': data})

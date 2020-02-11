@@ -79,7 +79,7 @@ def boast(request):
     return render(request, html, {'data': data})
 
 
-def roast(request):
+def Roast(request):
     html = 'index.html'
     data = ghostPost.objects.filter(is_Boast=False).order_by('-time')
     return render(request, html, {'data': data})

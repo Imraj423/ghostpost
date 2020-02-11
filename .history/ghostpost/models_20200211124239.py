@@ -8,6 +8,7 @@ class ghostPost(models.Model):
     is_Boast = models.BooleanField()
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
+    key = models.join(random.choice(string.ascii_uppercase) for _ in range(8))
 
     def __str__(self):
         return self.message

@@ -71,15 +71,3 @@ def sortedr(request):
     html = "index.html"
     data = ghostPost.objects.all().order_by("-is_Boast").reverse()
     return render(request, html, {"data": data})
-
-
-def boast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=True).order_by('-time')
-    return render(request, html, {'data': data})
-
-
-def roast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=False).order_by('-time')
-    return render(request, html, {'data': data})

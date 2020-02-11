@@ -51,35 +51,11 @@ def dislike(request, id):
 def sorted(request):
     html = "index.html"
     data = ghostPost.objects.all().order_by(
-        "-like")
+        "-like").order_by("-time").order_by("-is_Boast")
     return render(request, html, {"data": data})
 
 
-def sortedt(request):
+def sorted(request):
     html = "index.html"
     data = ghostPost.objects.all().order_by("-time")
     return render(request, html, {"data": data})
-
-
-def sortedb(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by("-is_Boast")
-    return render(request, html, {"data": data})
-
-
-def sortedr(request):
-    html = "index.html"
-    data = ghostPost.objects.all().order_by("-is_Boast").reverse()
-    return render(request, html, {"data": data})
-
-
-def boast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=True).order_by('-time')
-    return render(request, html, {'data': data})
-
-
-def roast(request):
-    html = 'index.html'
-    data = ghostPost.objects.filter(is_Boast=False).order_by('-time')
-    return render(request, html, {'data': data})

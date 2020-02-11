@@ -31,6 +31,4 @@ urlpatterns = [
     path('sortt/', views.sortedt, name="sort_time"),
     path('sortb/', views.sortedb, name="sort_boast"),
     path('sortr/', views.sortedr, name="sort_roast"),
-    path('boast/', views.boast, name="boast"),
-    path('roast/', views.roast, name="roast")
     ]
