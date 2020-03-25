@@ -29,15 +29,15 @@ router.register(r'ghostpost', views.GhostPost_view)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('', views.index, name="index"),
-    path('detail/', views.detail),
-    path('addpost/', views.post_add),
-    path('like/<int:id>', views.like, name="index"),
-    path('dislike/<int:id>', views.dislike, name="index"),
-    path('sort/', views.sorted, name="sort"),
-    path('sortt/', views.sortedt, name="sort_time"),
-    path('sortb/', views.sortedb, name="sort_boast"),
-    path('sortr/', views.sortedr, name="sort_roast"),
-    path('boast/', views.boast, name="boast"),
-    path('roast/', views.roast, name="roast")
+    # path('', views.index, name="index"),
+    # path('detail/', views.detail),
+    # path('addpost/', views.post_add),
+    # path('like/<int:id>', views.like, name="index"),
+    # path('dislike/<int:id>', views.dislike, name="index"),
+    # path('sort/', views.sorted, name="sort"),
+    # path('sortt/', views.sortedt, name="sort_time"),
+    # path('sortb/', views.sortedb, name="sort_boast"),
+    # path('sortr/', views.sortedr, name="sort_roast"),
+    # path('boast/', views.boast, name="boast"),
+    # path('roast/', views.roast, name="roast")
     ]
