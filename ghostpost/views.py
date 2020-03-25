@@ -1,9 +1,15 @@
-
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from ghostpost.models import ghostPost
 from django.shortcuts import render, reverse, HttpResponseRedirect
 from ghostpost.forms import addPost
+from rest_framework import viewsets
+from ghostpost import models, serializers
+
+
+class GhostPost_view(viewsets.ModelViewSet):
+
+    queryset = models.ghostPost.objects.all()
+    serializer_class = serializers.GhostPost_Serializer
 
 
 def index(request):

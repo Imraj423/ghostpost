@@ -37,9 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fontawesome_5',
-    'bootstrap_modal_forms',
-    'ghostpost'
+    'rest_framework',
+    'ghostpost',
 ]
 
 MIDDLEWARE = [
